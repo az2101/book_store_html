@@ -7,6 +7,14 @@ app = Flask(__name__)
 
 # == Your Routes Here ==
 
+@app.route('/hello', methods=['GET'])
+def get_hello():
+    return render_template('hello.html', message="Hello, world!")
+
+@app.route('/goodbye', methods=['GET'])
+def get_goodbye():
+    return render_template('goodbye.html', message="Goodbye!")
+
 
 # == Example Code Below ==
 
